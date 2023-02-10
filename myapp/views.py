@@ -7,8 +7,8 @@ from rest_framework.request import Request
 
 from rest_framework import generics
 from .models import Book
-# from .serializers import BookSerializer
-from myapp.serializers import BookSerializer
+from .serializers import BookSerializer
+# from myapp.serializers import BookSerializer
 # from rest_framework_simplejwt.views import TokenObtainPairView
 
 from django.contrib.auth.models import User
