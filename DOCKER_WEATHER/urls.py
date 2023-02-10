@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('myapp.urls')),
     # path('api/token', include('myapp.urls')),
+    path('api/', include('myapp.urls')),
 ]
 # myproject/urls.py
 
