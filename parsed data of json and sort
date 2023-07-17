@@ -1,0 +1,70 @@
+import json
+
+data = '''
+{
+  "movies": [
+    {
+      "name": "Inception",
+      "rating": 8.8,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ]
+    },
+    {
+      "name": "Godfather",
+      "rating": 9.2,
+      "genres": [
+        "Crime",
+        "Drama"
+      ]
+    },
+    {
+      "name": "The Pink Panther",
+      "rating": 5.3,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Crime"
+      ]
+    },
+    {
+      "name": "12 Angry Men",
+      "rating": 8.9,
+      "genres": [
+        "Drama"
+      ]
+    },
+    {
+      "name": "Citizen Kane",
+      "rating": 8.5,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ]
+    },
+    {
+      "name": "Remember the Titans",
+      "rating": 7.6,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Sport"
+      ]
+    }
+  ]
+}
+'''
+
+parsed_data = json.loads(data)
+movies = parsed_data['movies']
+
+# Sort the movies based on the rating field in descending order
+sorted_movies = sorted(movies, key=lambda movie: movie['rating'], reverse=True)
+
+print(sorted_movies)
+
+
+[{'name': 'Godfather', 'rating': 9.2, 'genres': ['Crime', 'Drama']}, {'name': '12 Angry Men', 'rating': 8.9, 'genres': ['Drama']}, {'name': 'Inception', 'rating': 8.8, 'genres': ['Action', 'Adventure', 'Sci-Fi']}, {'name': 'Citizen Kane', 'rating': 8.5, 'genres': ['Drama', 'Mystery']}, {'name': 'Remember the Titans', 'rating': 7.6, 'genres': ['Biography', 'Drama', 'Sport']}, {'name': 'The Pink Panther', 'rating': 5.3, 'genres': ['Adventure', 'Comedy', 'Crime']}]
+> 
